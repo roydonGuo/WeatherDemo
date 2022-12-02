@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StackLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent">
+
+    <Image
+        ohos:id="$+id:bg"
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:background_element="$media:bg"
+        ohos:scale_mode="center"/>
+
+    <DirectionalLayout
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:orientation="vertical">
+
+        <DirectionalLayout
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:bottom_margin="8vp"
+            ohos:orientation="horizontal"
+            ohos:top_margin="8vp">
+
+            <Image
+                ohos:id="$+id:add"
+                ohos:height="30vp"
+                ohos:width="30vp"
+                ohos:image_src="$media:add"
+                ohos:layout_alignment="horizontal_center"
+                ohos:left_margin="20vp"/>
+
+            <Text
+                ohos:id="$+id:text_city"
+                ohos:height="match_parent"
+                ohos:width="260vp"
+                ohos:layout_alignment="horizontal_center"
+                ohos:layout_weight="1"
+                ohos:text="郑州"
+                ohos:text_alignment="center"
+                ohos:text_color="$ohos:color:dialog_text_alert"
+                ohos:text_size="28fp"/>
+
+            <Image
+                ohos:id="$+id:more"
+                ohos:height="30vp"
+                ohos:width="30vp"
+                ohos:image_src="$media:more"
+                ohos:layout_alignment="horizontal_center"
+                ohos:right_margin="20vp"/>
+
+            <!--        <WebView-->
+            <!--            ohos:width="match_parent"-->
+            <!--            ohos:height="8vp"-->
+            <!--            ohos:layout_alignment="center"-->
+            <!--            ohos:alpha="0.8"-->
+            <!--            ohos:background_element="$graphic:background_ability_main" />-->
+
+        </DirectionalLayout>
+
+        <ProgressBar
+            ohos:id="$+id:progressbar"
+            ohos:height="8vp"
+            ohos:width="match_parent"
+            ohos:max="100"
+            ohos:min="0"
+            ohos:progress="100"
+            ohos:progress_element="#FFF6F0F0"
+            ohos:progress_width="10vp"/>
+
+        <DirectionalLayout
+            ohos:height="match_parent"
+            ohos:width="match_parent"
+            ohos:layout_alignment="horizontal_center"
+            ohos:orientation="vertical"
+            ohos:top_margin="10vp"
+            >
+
+            <Image
+                ohos:id="$+id:weather_img"
+                ohos:height="100vp"
+                ohos:width="160vp"
+                ohos:image_src="$media:weather_yin"
+                ohos:layout_alignment="horizontal_center"
+                ohos:scale_mode="clip_center"/>
+
+            <Text
+                ohos:id="$+id:text_weather"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:layout_alignment="horizontal_center"
+                ohos:text="阴转多云"
+                ohos:text_color="$ohos:color:dialog_text_alert"
+                ohos:text_size="20fp"/>
+
+            <Text
+                ohos:id="$+id:text_tem"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:layout_alignment="horizontal_center"
+                ohos:text="26°C"
+                ohos:text_color="$ohos:color:dialog_text_alert"
+                ohos:text_size="50fp"/>
+
+            <Text
+                ohos:id="$+id:text_tem_low_high"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:layout_alignment="horizontal_center"
+                ohos:text="20°C/30°C"
+                ohos:text_color="$ohos:color:dialog_text_alert"
+                ohos:text_size="20fp"/>
+
+            <Text
+                ohos:id="$+id:text_week"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:layout_alignment="horizontal_center"
+                ohos:text="星期日"
+                ohos:text_color="$ohos:color:dialog_text_alert"
+                ohos:text_size="20fp"/>
+
+
+            <ListContainer
+                ohos:id="$+id:list_container"
+                ohos:height="400vp"
+                ohos:width="340vp"
+                ohos:background_element="$graphic:background_ability_main"
+                ohos:focus_border_radius="10vp"
+                ohos:layout_alignment="horizontal_center"/>
+
+        </DirectionalLayout>
+
+
+    </DirectionalLayout>
+
+
+</StackLayout>
