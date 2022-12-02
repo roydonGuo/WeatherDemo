@@ -7,11 +7,16 @@
       "name": "1.0.0"
     }
   },
-  "deviceConfig": {},
+  "deviceConfig": {
+    "default": {
+      "network": {
+        "cleartextTraffic": true
+      }
+    }
+  },
   "module": {
     "reqPermissions": [
       {
-        "reason": "",
         "name": "ohos.permission.INTERNET"
       }
     ],
@@ -52,6 +57,14 @@
         "type": "page",
         "launchType": "standard"
       }
-    ]
+    ],
+    "metaData": {
+      "customizeData": [
+        {
+          "name": "hwc-theme",
+          "value": "androidhwext:style/Theme.Emui.Light.NoTitleBar.Fullscreen"
+        }
+      ]
+    }
   }
 }
