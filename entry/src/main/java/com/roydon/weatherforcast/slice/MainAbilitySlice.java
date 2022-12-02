@@ -16,13 +16,13 @@ import ohos.app.dispatcher.task.TaskPriority;
 
 public class MainAbilitySlice extends AbilitySlice {
 
-    private Text city;
-    private Image weatherImg;
-    private Text weather;
-    private Text tem;
-    private Text temLowHigh;
-    private Text week;
-    private ListContainer listContainer;
+     Text city;
+     Image weatherImg;
+     Text weather;
+     Text tem;
+     Text temLowHigh;
+     Text week;
+     ListContainer listContainer;
 
 //    private WeatherBean weatherBean = null;
 //    private DayWeatherBean dayWeather = null;
@@ -39,8 +39,8 @@ public class MainAbilitySlice extends AbilitySlice {
     }
 
     public void initView() {
-
-        getWeather("商丘");
+        initComponent();
+        getWeather("深圳");
 //        dataShow(weatherBean);
     }
 
@@ -87,24 +87,24 @@ public class MainAbilitySlice extends AbilitySlice {
             String result = NetworkUtil.httpGet(cityName);
             Gson gson = new Gson();
             WeatherBean weatherBean = gson.fromJson(result, WeatherBean.class);
-//            city.setText(weatherBean.getCity());
-//            System.out.println(weatherBean);
-            getUITaskDispatcher().asyncDispatch(() -> {
-                city = (Text) findComponentById(ResourceTable.Id_text_city);
-                weatherImg = (Image) findComponentById(ResourceTable.Id_weather_img);
-                weather = (Text) findComponentById(ResourceTable.Id_text_weather);
-                tem = (Text) findComponentById(ResourceTable.Id_text_tem);
-                temLowHigh = (Text) findComponentById(ResourceTable.Id_text_tem_low_high);
-                week = (Text) findComponentById(ResourceTable.Id_text_week);
-                DayWeatherBean dayWeather = weatherBean.getData().get(0);//当天天气
-                System.out.println("dayWeather = " + dayWeather);
-                city.setText(weatherBean.getCity());
-//                weatherImg.setPixelMap(WeatherImgUtil.getImgResOfWeather(dayWeather.getWea_img()));
-                weather.setText(dayWeather.getWea());
-                tem.setText(dayWeather.getTem());
-                temLowHigh.setText(dayWeather.getTem2() + "/" + dayWeather.getTem1());
-                week.setText(dayWeather.getWeek());
-            });
+            city.setText(weatherBean.getCity());
+            System.out.println(weatherBean);
+//            getUITaskDispatcher().asyncDispatch(() -> {
+//                city = (Text) findComponentById(ResourceTable.Id_text_city);
+//                weatherImg = (Image) findComponentById(ResourceTable.Id_weather_img);
+//                weather = (Text) findComponentById(ResourceTable.Id_text_weather);
+//                tem = (Text) findComponentById(ResourceTable.Id_text_tem);
+//                temLowHigh = (Text) findComponentById(ResourceTable.Id_text_tem_low_high);
+//                week = (Text) findComponentById(ResourceTable.Id_text_week);
+//                DayWeatherBean dayWeather = weatherBean.getData().get(0);//当天天气
+//                System.out.println("dayWeather = " + dayWeather);
+//                city.setText(weatherBean.getCity());
+////                weatherImg.setPixelMap(WeatherImgUtil.getImgResOfWeather(dayWeather.getWea_img()));
+//                weather.setText(dayWeather.getWea());
+//                tem.setText(dayWeather.getTem());
+//                temLowHigh.setText(dayWeather.getTem2() + "/" + dayWeather.getTem1());
+//                week.setText(dayWeather.getWeek());
+//            });
         });
     }
 
