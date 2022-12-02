@@ -89,22 +89,16 @@ public class MainAbilitySlice extends AbilitySlice {
             WeatherBean weatherBean = gson.fromJson(result, WeatherBean.class);
             city.setText(weatherBean.getCity());
             System.out.println(weatherBean);
-//            getUITaskDispatcher().asyncDispatch(() -> {
-//                city = (Text) findComponentById(ResourceTable.Id_text_city);
-//                weatherImg = (Image) findComponentById(ResourceTable.Id_weather_img);
-//                weather = (Text) findComponentById(ResourceTable.Id_text_weather);
-//                tem = (Text) findComponentById(ResourceTable.Id_text_tem);
-//                temLowHigh = (Text) findComponentById(ResourceTable.Id_text_tem_low_high);
-//                week = (Text) findComponentById(ResourceTable.Id_text_week);
-//                DayWeatherBean dayWeather = weatherBean.getData().get(0);//当天天气
-//                System.out.println("dayWeather = " + dayWeather);
-//                city.setText(weatherBean.getCity());
-////                weatherImg.setPixelMap(WeatherImgUtil.getImgResOfWeather(dayWeather.getWea_img()));
-//                weather.setText(dayWeather.getWea());
-//                tem.setText(dayWeather.getTem());
-//                temLowHigh.setText(dayWeather.getTem2() + "/" + dayWeather.getTem1());
-//                week.setText(dayWeather.getWeek());
-//            });
+            getUITaskDispatcher().asyncDispatch(() -> {
+                DayWeatherBean dayWeather = weatherBean.getData().get(0);//当天天气
+                System.out.println("dayWeather = " + dayWeather);
+                city.setText(weatherBean.getCity());
+                weatherImg.setPixelMap(WeatherImgUtil.getImgResOfWeather(dayWeather.getWea_img()));
+                weather.setText(dayWeather.getWea());
+                tem.setText(dayWeather.getTem());
+                temLowHigh.setText(dayWeather.getTem2() + "/" + dayWeather.getTem1());
+                week.setText(dayWeather.getWeek());
+            });
         });
     }
 
