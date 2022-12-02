@@ -6,10 +6,6 @@ import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * TextView tv_city,tv_time,tv_weather,tv_week,tv_tem,tv_tem_low_high,tv_win,tv_air;7个
- * ImageView iv_weather;//天气图标
- */
 public class DayWeatherBean implements Serializable {
     @SerializedName("date")
     private String date;
