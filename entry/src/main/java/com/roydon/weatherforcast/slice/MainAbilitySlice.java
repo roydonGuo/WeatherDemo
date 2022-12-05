@@ -16,13 +16,13 @@ import ohos.app.dispatcher.task.TaskPriority;
 
 public class MainAbilitySlice extends AbilitySlice {
 
-     Text city;
-     Image weatherImg;
-     Text weather;
-     Text tem;
-     Text temLowHigh;
-     Text week;
-     ListContainer listContainer;
+    Text city;
+    Image weatherImg;
+    Text weather;
+    Text tem;
+    Text temLowHigh;
+    Text week;
+    ListContainer listContainer;
 
 //    private WeatherBean weatherBean = null;
 //    private DayWeatherBean dayWeather = null;
@@ -44,7 +44,7 @@ public class MainAbilitySlice extends AbilitySlice {
 //        dataShow(weatherBean);
     }
 
-    private void initComponent() {
+    public void initComponent() {
         city = (Text) findComponentById(ResourceTable.Id_text_city);
         weatherImg = (Image) findComponentById(ResourceTable.Id_weather_img);
         weather = (Text) findComponentById(ResourceTable.Id_text_weather);
@@ -55,7 +55,7 @@ public class MainAbilitySlice extends AbilitySlice {
 
     }
 
-    private void dataShow(WeatherBean weatherBean) {
+    public void dataShow(WeatherBean weatherBean) {
         if (weatherBean == null) {
             return;
         }
@@ -80,14 +80,14 @@ public class MainAbilitySlice extends AbilitySlice {
     /**
      * GlobalTaskDispatcher 派发任务
      */
-    private void getWeather(String cityName) {
+    public void getWeather(String cityName) {
+
         //网络请求
         TaskDispatcher globalTaskDispatcher = getGlobalTaskDispatcher(TaskPriority.DEFAULT);
         globalTaskDispatcher.asyncDispatch(() -> {
             String result = NetworkUtil.httpGet(cityName);
             Gson gson = new Gson();
             WeatherBean weatherBean = gson.fromJson(result, WeatherBean.class);
-            city.setText(weatherBean.getCity());
             System.out.println(weatherBean);
             getUITaskDispatcher().asyncDispatch(() -> {
                 DayWeatherBean dayWeather = weatherBean.getData().get(0);//当天天气
