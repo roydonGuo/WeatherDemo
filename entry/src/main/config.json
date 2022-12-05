@@ -18,6 +18,12 @@
     "reqPermissions": [
       {
         "name": "ohos.permission.INTERNET"
+      },
+      {
+        "name": "ohos.permission.GET_NETWORK_INFO"
+      },
+      {
+        "name": "ohos.permission.SET_NETWORK_INFO"
       }
     ],
     "package": "com.roydon.weatherforcast",
@@ -57,14 +63,7 @@
         "type": "page",
         "launchType": "standard"
       }
-    ],
-    "metaData": {
-      "customizeData": [
-        {
-          "name": "hwc-theme",
-          "value": "androidhwext:style/Theme.Emui.Light.NoTitleBar.Fullscreen"
-        }
-      ]
-    }
+    ]
+
   }
 }
