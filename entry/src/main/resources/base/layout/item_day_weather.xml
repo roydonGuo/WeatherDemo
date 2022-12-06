@@ -3,32 +3,35 @@
     xmlns:ohos="http://schemas.huawei.com/res/ohos"
     ohos:height="40vp"
     ohos:width="match_parent"
+    ohos:alignment="horizontal_center"
     ohos:left_margin="20vp"
-    ohos:right_margin="20vp"
     ohos:orientation="horizontal"
-    ohos:alignment="horizontal_center">
+    ohos:right_margin="20vp">
+
     <Text
         ohos:id="$+id:text_date"
         ohos:height="match_content"
         ohos:width="match_content"
-        ohos:weight="1"
         ohos:text="11-11"
         ohos:text_color="#fff"
-        ohos:text_size="20fp"/>
+        ohos:text_size="20fp"
+        ohos:weight="1"/>
+
     <Image
         ohos:id="$+id:day_weather_img"
         ohos:height="30vp"
         ohos:width="30vp"
-        ohos:weight="1"
         ohos:image_src="$media:weather_yin"
-        ohos:scale_mode="inside"/>
+        ohos:scale_mode="inside"
+        ohos:weight="1"/>
+
     <Text
         ohos:id="$+id:text_tem_low_high"
         ohos:height="match_content"
         ohos:width="match_content"
-        ohos:text_alignment="right"
-        ohos:weight="1"
         ohos:text="20°C/30°C"
+        ohos:text_alignment="right"
         ohos:text_color="#fff"
-        ohos:text_size="20fp"/>
+        ohos:text_size="20fp"
+        ohos:weight="1"/>
 </DirectionalLayout>

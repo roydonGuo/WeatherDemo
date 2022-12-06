@@ -73,168 +73,173 @@
             ohos:progress_width="10vp"/>
 
         <ScrollView
-            ohos:rebound_effect="true"
-            ohos:height="match_parent"
-            ohos:width="match_parent">
-
-        <DirectionalLayout
             ohos:height="match_parent"
             ohos:width="match_parent"
-            ohos:layout_alignment="horizontal_center"
-            ohos:orientation="vertical"
-            ohos:top_margin="10vp"
-            >
-            <!--ohos:scale_mode="stretch"表示将原图缩放到与Image大小一致-->
-            <Image
-                ohos:id="$+id:weather_img"
-                ohos:height="100vp"
-                ohos:width="120vp"
-                ohos:image_src="$media:weather_yin"
-                ohos:layout_alignment="horizontal_center"
-                ohos:scale_mode="stretch"/>
+            ohos:rebound_effect="true">
 
-            <Text
-                ohos:id="$+id:text_weather"
-                ohos:height="match_content"
-                ohos:width="match_content"
-                ohos:layout_alignment="horizontal_center"
-                ohos:text="阴转多云"
-                ohos:text_color="#000"
-                ohos:text_size="20fp"/>
-
-            <Text
-                ohos:id="$+id:text_tem"
-                ohos:height="match_content"
-                ohos:width="match_content"
-                ohos:layout_alignment="horizontal_center"
-                ohos:text="26°C"
-                ohos:text_color="#000"
-                ohos:text_size="50fp"/>
-
-            <Text
-                ohos:id="$+id:text_tem_low_high"
-                ohos:height="match_content"
-                ohos:width="match_content"
-                ohos:layout_alignment="horizontal_center"
-                ohos:text="20°C/30°C"
-                ohos:text_color="#000"
-                ohos:text_size="20fp"/>
-
-            <Text
-                ohos:id="$+id:text_week"
-                ohos:height="match_content"
-                ohos:width="match_content"
-                ohos:layout_alignment="horizontal_center"
-                ohos:text="星期日"
-                ohos:text_color="#000"
-                ohos:text_size="20fp"/>
-
-            <!--风向以及出行建议-->
             <DirectionalLayout
-                ohos:height="match_content"
+                ohos:height="match_parent"
                 ohos:width="match_parent"
-                ohos:left_margin="10vp"
-                ohos:right_margin="10vp"
-                ohos:top_padding="6vp"
-                ohos:bottom_padding="6vp"
-                ohos:background_element="$graphic:background_ability_main"
                 ohos:layout_alignment="horizontal_center"
-                ohos:orientation="horizontal"
+                ohos:orientation="vertical"
+                ohos:top_margin="10vp"
                 >
-                <!--左侧-->
-                <DirectionalLayout
+                <!--ohos:scale_mode="stretch"表示将原图缩放到与Image大小一致-->
+                <Image
+                    ohos:id="$+id:weather_img"
+                    ohos:height="100vp"
+                    ohos:width="120vp"
+                    ohos:image_src="$media:weather_yin"
+                    ohos:layout_alignment="horizontal_center"
+                    ohos:scale_mode="stretch"/>
+
+                <Text
+                    ohos:id="$+id:text_weather"
                     ohos:height="match_content"
                     ohos:width="match_content"
-                    ohos:left_margin="10vp"
-                    ohos:right_margin="10vp"
                     ohos:layout_alignment="horizontal_center"
-                    ohos:orientation="vertical"
-                    >
-                    <Image
-                        ohos:height="60vp"
-                        ohos:width="60vp"
-                        ohos:image_src="$media:fengli"
-                        ohos:layout_alignment="horizontal_center"
-                        ohos:scale_mode="stretch"/>
-                    <Text
-                        ohos:id="$+id:text_win"
-                        ohos:height="match_content"
-                        ohos:width="match_content"
-                        ohos:layout_alignment="horizontal_center"
-                        ohos:text="西北风3~4级"
-                        ohos:text_color="#fff"
-                        ohos:text_size="16fp"/>
-                </DirectionalLayout>
-                <!--右侧-->
+                    ohos:text="阴转多云"
+                    ohos:text_color="#000"
+                    ohos:text_size="20fp"/>
+
+                <Text
+                    ohos:id="$+id:text_tem"
+                    ohos:height="match_content"
+                    ohos:width="match_content"
+                    ohos:layout_alignment="horizontal_center"
+                    ohos:text="26°C"
+                    ohos:text_color="#000"
+                    ohos:text_size="50fp"/>
+
+                <Text
+                    ohos:id="$+id:text_tem_low_high"
+                    ohos:height="match_content"
+                    ohos:width="match_content"
+                    ohos:layout_alignment="horizontal_center"
+                    ohos:text="20°C/30°C"
+                    ohos:text_color="#000"
+                    ohos:text_size="20fp"/>
+
+                <Text
+                    ohos:id="$+id:text_week"
+                    ohos:height="match_content"
+                    ohos:width="match_content"
+                    ohos:layout_alignment="horizontal_center"
+                    ohos:text="星期日"
+                    ohos:text_color="#000"
+                    ohos:text_size="20fp"/>
+
+                <!--风向以及出行建议-->
                 <DirectionalLayout
                     ohos:height="match_content"
                     ohos:width="match_parent"
-                    ohos:left_margin="10vp"
-                    ohos:right_margin="10vp"
+                    ohos:background_element="$graphic:background_ability_main"
+                    ohos:bottom_padding="6vp"
                     ohos:layout_alignment="horizontal_center"
-                    ohos:orientation="vertical"
+                    ohos:left_margin="10vp"
+                    ohos:orientation="horizontal"
+                    ohos:right_margin="10vp"
+                    ohos:top_padding="6vp"
                     >
-                    <!--空气质量-->
+                    <!--左侧-->
                     <DirectionalLayout
                         ohos:height="match_content"
-                        ohos:width="match_parent"
-                        ohos:orientation="horizontal"
+                        ohos:width="match_content"
                         ohos:layout_alignment="horizontal_center"
-                        ohos:alignment="right"
+                        ohos:left_margin="10vp"
+                        ohos:orientation="vertical"
+                        ohos:right_margin="10vp"
                         >
+
                         <Image
-                            ohos:height="30vp"
-                            ohos:width="30vp"
-                            ohos:image_src="$media:kongqi"
+                            ohos:height="60vp"
+                            ohos:width="60vp"
+                            ohos:image_src="$media:fengli"
                             ohos:layout_alignment="horizontal_center"
                             ohos:scale_mode="stretch"/>
+
                         <Text
-                            ohos:id="$+id:text_air"
+                            ohos:id="$+id:text_win"
                             ohos:height="match_content"
                             ohos:width="match_content"
                             ohos:layout_alignment="horizontal_center"
-                            ohos:text="43 | 优"
+                            ohos:text="西北风3~4级"
                             ohos:text_color="#fff"
                             ohos:text_size="16fp"/>
-
                     </DirectionalLayout>
-
-                    <!--出行建议-->
+                    <!--右侧-->
                     <DirectionalLayout
                         ohos:height="match_content"
                         ohos:width="match_parent"
+                        ohos:layout_alignment="horizontal_center"
+                        ohos:left_margin="10vp"
+                        ohos:orientation="vertical"
+                        ohos:right_margin="10vp"
                         >
-                        <Text
-                            ohos:id="$+id:text_tips"
-                            ohos:height="match_parent"
-                            ohos:width="match_content"
-                            ohos:multiple_lines="true"
-                            ohos:max_text_lines="3"
-                            ohos:truncation_mode="ellipsis_at_end"
-                            ohos:text="儿童、老年人及心脏病、呼吸系统疾病患者应尽量减少体力消耗大的户外活动。"
-                            ohos:text_color="#FF9F02FF"
-                            ohos:text_size="13fp"/>
+                        <!--空气质量-->
+                        <DirectionalLayout
+                            ohos:height="match_content"
+                            ohos:width="match_parent"
+                            ohos:alignment="right"
+                            ohos:layout_alignment="horizontal_center"
+                            ohos:orientation="horizontal"
+                            >
+
+                            <Image
+                                ohos:height="30vp"
+                                ohos:width="30vp"
+                                ohos:image_src="$media:kongqi"
+                                ohos:layout_alignment="horizontal_center"
+                                ohos:scale_mode="stretch"/>
+
+                            <Text
+                                ohos:id="$+id:text_air"
+                                ohos:height="match_content"
+                                ohos:width="match_content"
+                                ohos:layout_alignment="horizontal_center"
+                                ohos:text="43 | 优"
+                                ohos:text_color="#fff"
+                                ohos:text_size="16fp"/>
+
+                        </DirectionalLayout>
+
+                        <!--出行建议-->
+                        <DirectionalLayout
+                            ohos:height="match_content"
+                            ohos:width="match_parent"
+                            >
+
+                            <Text
+                                ohos:id="$+id:text_tips"
+                                ohos:height="match_parent"
+                                ohos:width="match_content"
+                                ohos:max_text_lines="3"
+                                ohos:multiple_lines="true"
+                                ohos:text="儿童、老年人及心脏病、呼吸系统疾病患者应尽量减少体力消耗大的户外活动。"
+                                ohos:text_color="#FF9F02FF"
+                                ohos:text_size="13fp"
+                                ohos:truncation_mode="ellipsis_at_end"/>
+
+                        </DirectionalLayout>
 
                     </DirectionalLayout>
 
                 </DirectionalLayout>
 
+                <ListContainer
+                    ohos:id="$+id:list_container"
+                    ohos:height="match_content"
+                    ohos:width="match_parent"
+                    ohos:background_element="$graphic:background_ability_main"
+                    ohos:bottom_padding="6vp"
+                    ohos:layout_alignment="horizontal_center"
+                    ohos:left_margin="10vp"
+                    ohos:orientation="vertical"
+                    ohos:right_margin="10vp"
+                    ohos:top_margin="10vp"
+                    ohos:top_padding="6vp"/>
+
             </DirectionalLayout>
-
-            <ListContainer
-                ohos:id="$+id:list_container"
-                ohos:height="match_content"
-                ohos:width="match_parent"
-                ohos:left_margin="10vp"
-                ohos:right_margin="10vp"
-                ohos:top_margin="10vp"
-                ohos:top_padding="6vp"
-                ohos:bottom_padding="6vp"
-                ohos:background_element="$graphic:background_ability_main"
-                ohos:layout_alignment="horizontal_center"
-                ohos:orientation="vertical"/>
-
-        </DirectionalLayout>
         </ScrollView>
 
     </DirectionalLayout>

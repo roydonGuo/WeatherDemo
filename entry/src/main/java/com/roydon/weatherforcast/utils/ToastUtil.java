@@ -12,12 +12,12 @@ public class ToastUtil {
 
     /**
      * @param context 上下文参数
-     * @param msg 内容
+     * @param msg     内容
      */
-    public static void showToast(Context context, String msg){
+    public static void showToast(Context context, String msg) {
         DirectionalLayout layout = (DirectionalLayout) LayoutScatter.getInstance(context)
                 .parse(ResourceTable.Layout_layout_toast, null, false);
-        Text msg_toast =layout.findComponentById(ResourceTable.Id_msg_toast);
+        Text msg_toast = layout.findComponentById(ResourceTable.Id_msg_toast);
         msg_toast.setText(msg);
         new ToastDialog(context)
                 .setContentCustomComponent(layout)

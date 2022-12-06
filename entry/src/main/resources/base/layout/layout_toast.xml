@@ -3,14 +3,15 @@
     xmlns:ohos="http://schemas.huawei.com/res/ohos"
     ohos:height="match_content"
     ohos:width="match_content"
-    ohos:padding="10vp"
     ohos:background_element="$graphic:background_toast_element"
-    ohos:orientation="horizontal">
+    ohos:orientation="horizontal"
+    ohos:padding="10vp">
+
     <Image
-        ohos:width="16vp"
         ohos:height="16vp"
-        ohos:scale_mode="inside"
-        ohos:image_src="$media:icon"/>
+        ohos:width="16vp"
+        ohos:image_src="$media:icon"
+        ohos:scale_mode="inside"/>
 
     <Text
         ohos:id="$+id:msg_toast"

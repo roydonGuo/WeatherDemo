@@ -58,6 +58,7 @@ public class MainAbilitySlice extends AbilitySlice {
         TaskDispatcher globalTaskDispatcher = getGlobalTaskDispatcher(TaskPriority.DEFAULT);
         globalTaskDispatcher.asyncDispatch(() -> {
             String result = NetworkUtil.httpGet(cityName);
+//            System.out.println(result);
             Gson gson = new Gson();
             WeatherBean weatherBean = gson.fromJson(result, WeatherBean.class);
             if (weatherBean == null) {
