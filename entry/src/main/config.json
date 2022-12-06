@@ -15,17 +15,6 @@
     }
   },
   "module": {
-    "reqPermissions": [
-      {
-        "name": "ohos.permission.INTERNET"
-      },
-      {
-        "name": "ohos.permission.GET_NETWORK_INFO"
-      },
-      {
-        "name": "ohos.permission.SET_NETWORK_INFO"
-      }
-    ],
     "package": "com.roydon.weatherforcast",
     "name": ".MyApplication",
     "mainAbility": "com.roydon.weatherforcast.MainAbility",
@@ -63,7 +52,25 @@
         "type": "page",
         "launchType": "standard"
       }
-    ]
-
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.INTERNET"
+      },
+      {
+        "name": "ohos.permission.GET_NETWORK_INFO"
+      },
+      {
+        "name": "ohos.permission.SET_NETWORK_INFO"
+      }
+    ],
+    "metaData": {
+      "customizeData": [
+        {
+          "name": "hwc-theme",
+          "value": "androidhwext:style/Theme.Emui.NoTitleBar"
+        }
+      ]
+    }
   }
 }
