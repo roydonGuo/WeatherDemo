@@ -5,27 +5,30 @@
     ohos:width="match_parent"
     ohos:left_margin="20vp"
     ohos:right_margin="20vp"
-    ohos:focus_border_radius="20vp"
-    ohos:background_element="#CB0B3264"
-    ohos:orientation="horizontal">
+    ohos:orientation="horizontal"
+    ohos:alignment="horizontal_center">
     <Text
         ohos:id="$+id:text_date"
         ohos:height="match_content"
         ohos:width="match_content"
-        ohos:layout_alignment="horizontal_center"
-        ohos:left_margin="10vp"
-        ohos:right_margin="50vp"
+        ohos:weight="1"
         ohos:text="11-11"
         ohos:text_color="#fff"
-        ohos:text_size="30fp"/>
+        ohos:text_size="20fp"/>
+    <Image
+        ohos:id="$+id:day_weather_img"
+        ohos:height="30vp"
+        ohos:width="30vp"
+        ohos:weight="1"
+        ohos:image_src="$media:weather_yin"
+        ohos:scale_mode="inside"/>
     <Text
         ohos:id="$+id:text_tem_low_high"
         ohos:height="match_content"
         ohos:width="match_content"
-        ohos:layout_alignment="horizontal_center"
-        ohos:left_margin="50vp"
-        ohos:right_margin="10vp"
+        ohos:text_alignment="right"
+        ohos:weight="1"
         ohos:text="20°C/30°C"
         ohos:text_color="#fff"
-        ohos:text_size="30fp"/>
+        ohos:text_size="20fp"/>
 </DirectionalLayout>
