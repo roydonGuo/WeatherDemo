@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_content"
+    ohos:width="match_content"
+    ohos:padding="10vp"
+    ohos:background_element="$graphic:background_toast_element"
+    ohos:orientation="horizontal">
+    <Image
+        ohos:width="16vp"
+        ohos:height="16vp"
+        ohos:scale_mode="inside"
+        ohos:image_src="$media:icon"/>
+
+    <Text
+        ohos:id="$+id:msg_toast"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:layout_alignment="vertical_center"
+        ohos:text_size="12fp"/>
+
+</DirectionalLayout>
