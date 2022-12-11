@@ -41,6 +41,7 @@ public class DayWeatherBeanProvider extends BaseItemProvider {
         return i;
     }
 
+
     @Override
     public Component getComponent(int i, Component component, ComponentContainer componentContainer) {
         final Component cpt;

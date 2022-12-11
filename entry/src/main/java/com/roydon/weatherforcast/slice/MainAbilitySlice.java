@@ -33,7 +33,7 @@ public class MainAbilitySlice extends AbilitySlice {
 
     public void initView() {
         initComponent();
-        getWeather("北京");
+        getWeather("永城");
     }
 
     public void initComponent() {
@@ -47,7 +47,6 @@ public class MainAbilitySlice extends AbilitySlice {
         air = (Text) findComponentById(ResourceTable.Id_text_air);
         tips = (Text) findComponentById(ResourceTable.Id_text_tips);
         listContainer = (ListContainer) findComponentById(ResourceTable.Id_list_container);
-
     }
 
     /**
